@@ -15,6 +15,7 @@
         "fed/tree": "^0.0",
         "fed/dialogs": "^0.0",
         "fed/ui": "^0.0",
+        "fed/maskedinput": "^0.0",
         "fed/css": "^0.0"
     }
 }
