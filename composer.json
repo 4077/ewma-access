@@ -1,5 +1,5 @@
 {
-    "name": "fed/access",
+    "name": "fed/ewma-access",
     "type": "ewma-module",
     "description": "ewma access",
     "authors": [
@@ -11,11 +11,6 @@
     "minimum-stability": "stable",
     "require": {
         "fed/ewma-module-installer-plugin": "~0.0.1",
-        "fed/grid": "^0.0",
-        "fed/tree": "^0.0",
-        "fed/dialogs": "^0.0",
-        "fed/ui": "^0.0",
-        "fed/maskedinput": "^0.0",
-        "fed/css": "^0.0"
+        "fed/plugins-maskedinput": "^0.1"
     }
 }

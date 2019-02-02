@@ -67,7 +67,7 @@ class NodeControl extends \Controller
             ]);
         }
 
-        $this->css(':\jquery\ui icons');
+        $this->css(':\js\jquery\ui icons');
 
         return $v;
     }

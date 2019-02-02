@@ -60,7 +60,7 @@ class Permissions extends \Controller
                        'TREE'                      => $this->treeView($rootNode)
                    ]);
 
-        $this->css(':\css\std~, \jquery\ui icons');
+        $this->css(':\css\std~, \js\jquery\ui icons');
 
         $eventFilter = ['user_id' => $this->user->id];
         $eventData = ['user' => pack_model($this->user)];

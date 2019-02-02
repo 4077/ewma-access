@@ -64,7 +64,7 @@ class Main extends \Controller
                        ]);
         }
 
-        $this->css(':\jquery\ui icons');
+        $this->css(':\js\jquery\ui icons');
 
         $this->e('ewma/access/users/update/enabled|' . $this->eventInstance)->rebind(':reload|');
 

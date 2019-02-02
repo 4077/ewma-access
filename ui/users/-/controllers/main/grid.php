@@ -33,7 +33,7 @@ class Grid extends \Controller
         $this->e('ewma/access/users/delete')->rebind(':reload');
         $this->e('ewma/access/users/create')->rebind(':reload');
 
-        $this->css(':\jquery\ui icons');
+        $this->css(':\js\jquery\ui icons');
 
         return $v;
     }
@@ -57,7 +57,7 @@ class Grid extends \Controller
                 'control'  => [
                     '^ui/userControls/enabled~:view|grid',
                     [
-                        'user' => '%row',
+                        'user' => '%model',
                         'mode' => 'compact'
                     ]
                 ]
@@ -68,7 +68,7 @@ class Grid extends \Controller
                 'control'  => [
                     '^ui/userControls/login~:view',
                     [
-                        'user' => '%row'
+                        'user' => '%model'
                     ]
                 ],
             ],
@@ -78,7 +78,7 @@ class Grid extends \Controller
                 'control'  => [
                     '^ui/userControls/email~:view',
                     [
-                        'user' => '%row'
+                        'user' => '%model'
                     ]
                 ]
             ],
@@ -89,7 +89,7 @@ class Grid extends \Controller
                 'control'  => [
                     '^ui/userControls/phone~:view',
                     [
-                        'user' => '%row'
+                        'user' => '%model'
                     ]
                 ]
             ],
@@ -100,7 +100,7 @@ class Grid extends \Controller
                 'control'  => [
                     '^ui/userControls/password~:view|grid',
                     [
-                        'user' => '%row',
+                        'user' => '%model',
                         'mode' => 'compact'
                     ]
                 ]
@@ -112,7 +112,7 @@ class Grid extends \Controller
                 'control' => [
                     '^ui/userControls/groups~:view',
                     [
-                        'user' => '%row'
+                        'user' => '%model'
                     ]
                 ]
             ],
@@ -123,7 +123,7 @@ class Grid extends \Controller
                 'control' => [
                     '^ui/userControls/permissions~:view',
                     [
-                        'user' => '%row'
+                        'user' => '%model'
                     ]
                 ]
             ],

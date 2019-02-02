@@ -55,7 +55,7 @@ class Permissions extends \Controller
                        ]);
         }
 
-        $this->css(':\css\std~, \jquery\ui icons');
+        $this->css(':\css\std~, \js\jquery\ui icons');
 
         $this->e('ewma/access/groups/update/name', ['group_id' => $this->group->id])->rebind(':reload');
         $this->e('ewma/access/permissions/create')->rebind(':reload');

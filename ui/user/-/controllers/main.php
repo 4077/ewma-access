@@ -51,7 +51,7 @@ class Main extends \Controller
                 'control'  => [
                     '^ui/userControls/enabled~:view|table',
                     [
-                        'user' => '%row',
+                        'user' => '%model',
                         'mode' => 'normal'
                     ]
                 ]
@@ -62,7 +62,7 @@ class Main extends \Controller
                 'control'  => [
                     '^ui/userControls/login~:view',
                     [
-                        'user' => '%row'
+                        'user' => '%model'
                     ]
                 ],
             ],
@@ -72,7 +72,7 @@ class Main extends \Controller
                 'control'  => [
                     '^ui/userControls/email~:view',
                     [
-                        'user' => '%row'
+                        'user' => '%model'
                     ]
                 ]
             ],
@@ -83,7 +83,7 @@ class Main extends \Controller
                 'control'  => [
                     '^ui/userControls/password~:view|table',
                     [
-                        'user' => '%row',
+                        'user' => '%model',
                         'mode' => 'normal'
                     ]
                 ]
@@ -95,7 +95,7 @@ class Main extends \Controller
                 'control' => [
                     '^ui/userControls/groups~:view',
                     [
-                        'user' => '%row'
+                        'user' => '%model'
                     ]
                 ]
             ],
@@ -105,7 +105,7 @@ class Main extends \Controller
                 'control' => [
                     '^ui/userControls/permissions~:view',
                     [
-                        'user' => '%row'
+                        'user' => '%model'
                     ]
                 ]
             ]
@@ -135,13 +135,13 @@ class Main extends \Controller
         $requestDataFlatten = a2f($data);
 
         foreach ($requestDataFlatten as $path => $value) {
-            if ($value === '%row') {
+            if ($value === '%model') {
                 $requestDataFlatten[$path] = $model;
-            } elseif ($value === '%row_id') {
+            } elseif ($value === '%model_id') {
                 $requestDataFlatten[$path] = $model->id;
             } elseif ($value === '%instance') {
                 $requestDataFlatten[$path] = $this->data['instance'];
-            } elseif ($value === '%row_id') {
+            } elseif ($value === '%model_id') {
                 $requestDataFlatten[$path] = $model->id;
             } elseif ($value === '%pack') {
                 $requestDataFlatten[$path] = pack_model($model);

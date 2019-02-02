@@ -45,7 +45,7 @@ class Permissions extends \Controller
                        ]);
         }
 
-        $this->css(':\css\std~, \jquery\ui icons');
+        $this->css(':\css\std~, \js\jquery\ui icons');
 
         $eventData = [];
 

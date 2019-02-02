@@ -87,7 +87,7 @@ class Groups extends \Controller
             ]
         ]);
 
-        $this->css(':\css\std~, \jquery\ui icons');
+        $this->css(':\css\std~, \js\jquery\ui icons');
 
         $this->e('ewma/access/groups/create')->rebind(':reload');
 
