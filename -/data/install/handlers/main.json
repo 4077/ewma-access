@@ -1,0 +1,243 @@
+{
+    "cat_id": 261,
+    "cats": {
+        "nodes_by_id": {
+            "261": {
+                "id": 261,
+                "parent_id": 257,
+                "position": 0,
+                "name": "ewma-access",
+                "path": "modules\/ewma-access"
+            }
+        },
+        "ids_by_parent": [],
+        "parents_by_id": [],
+        "ids_by_order": []
+    },
+    "handlers": {
+        "261": [
+            {
+                "handler": {
+                    "id": 1298,
+                    "target_type": "ewma\\handlers\\models\\Cat",
+                    "target_id": 261,
+                    "cat_position": 0,
+                    "position": 0,
+                    "instance": "",
+                    "name": "has",
+                    "path": "modules\/ewma-access:has"
+                },
+                "root_node": {
+                    "id": 10779,
+                    "handler_id": 1298,
+                    "parent_id": 0,
+                    "name": "",
+                    "source_handler_id": 0,
+                    "position": 10,
+                    "enabled": 1,
+                    "type": "ROOT",
+                    "required": 0,
+                    "cache_enabled": 0,
+                    "data": "{\"combine_mode\":\"concat\"}",
+                    "mappings": ""
+                },
+                "nodes": {
+                    "node_id": 10779,
+                    "node_type": "ROOT",
+                    "nodes": {
+                        "nodes_by_id": {
+                            "10779": {
+                                "id": 10779,
+                                "handler_id": 1298,
+                                "parent_id": 0,
+                                "name": "",
+                                "source_handler_id": 0,
+                                "position": 10,
+                                "enabled": 1,
+                                "type": "ROOT",
+                                "required": 0,
+                                "cache_enabled": 0,
+                                "data": "{\"combine_mode\":\"concat\"}",
+                                "mappings": ""
+                            },
+                            "10780": {
+                                "id": 10780,
+                                "handler_id": 1298,
+                                "parent_id": 10779,
+                                "name": "",
+                                "source_handler_id": 0,
+                                "position": 20,
+                                "enabled": 1,
+                                "type": "CALL",
+                                "required": 0,
+                                "cache_enabled": 0,
+                                "data": "{\"name\":\"\",\"path\":\"\\\\ewma\\\\access~:has\",\"desc\":\"\"}",
+                                "mappings": ""
+                            },
+                            "10781": {
+                                "id": 10781,
+                                "handler_id": 1298,
+                                "parent_id": 10780,
+                                "name": "",
+                                "source_handler_id": 0,
+                                "position": 30,
+                                "enabled": 1,
+                                "type": "INPUT",
+                                "required": 0,
+                                "cache_enabled": 0,
+                                "data": "{\"name\":\"\",\"path\":\"permissions\",\"desc\":\"\",\"combine_mode\":\"first\"}",
+                                "mappings": ""
+                            },
+                            "10782": {
+                                "id": 10782,
+                                "handler_id": 1298,
+                                "parent_id": 10781,
+                                "name": "",
+                                "source_handler_id": 0,
+                                "position": 40,
+                                "enabled": 1,
+                                "type": "VALUE",
+                                "required": 0,
+                                "cache_enabled": 0,
+                                "data": "{\"name\":\"\",\"type\":\"string\",\"value\":{\"string\":\"{permissions}\",\"array\":[],\"bool\":false}}",
+                                "mappings": ""
+                            }
+                        },
+                        "ids_by_parent": {
+                            "10779": [
+                                10780
+                            ],
+                            "10780": [
+                                10781
+                            ],
+                            "10781": [
+                                10782
+                            ]
+                        },
+                        "parents_by_id": {
+                            "10780": 10779,
+                            "10781": 10780,
+                            "10782": 10781
+                        },
+                        "ids_by_order": [
+                            10780,
+                            10781,
+                            10782
+                        ]
+                    }
+                }
+            },
+            {
+                "handler": {
+                    "id": 1297,
+                    "target_type": "ewma\\handlers\\models\\Cat",
+                    "target_id": 261,
+                    "cat_position": 0,
+                    "position": 10,
+                    "instance": "",
+                    "name": "hasPermission",
+                    "path": "modules\/ewma-access:hasPermission"
+                },
+                "root_node": {
+                    "id": 10775,
+                    "handler_id": 1297,
+                    "parent_id": 0,
+                    "name": "",
+                    "source_handler_id": 0,
+                    "position": 10,
+                    "enabled": 1,
+                    "type": "ROOT",
+                    "required": 0,
+                    "cache_enabled": 0,
+                    "data": "{\"combine_mode\":\"concat\",\"mappings\":\"*\"}",
+                    "mappings": ""
+                },
+                "nodes": {
+                    "node_id": 10775,
+                    "node_type": "ROOT",
+                    "nodes": {
+                        "nodes_by_id": {
+                            "10775": {
+                                "id": 10775,
+                                "handler_id": 1297,
+                                "parent_id": 0,
+                                "name": "",
+                                "source_handler_id": 0,
+                                "position": 10,
+                                "enabled": 1,
+                                "type": "ROOT",
+                                "required": 0,
+                                "cache_enabled": 0,
+                                "data": "{\"combine_mode\":\"concat\",\"mappings\":\"*\"}",
+                                "mappings": ""
+                            },
+                            "10776": {
+                                "id": 10776,
+                                "handler_id": 1297,
+                                "parent_id": 10775,
+                                "name": "",
+                                "source_handler_id": 0,
+                                "position": 20,
+                                "enabled": 1,
+                                "type": "CALL",
+                                "required": 0,
+                                "cache_enabled": 0,
+                                "data": "{\"name\":\"\",\"path\":\"\\\\ewma\\\\access~:hasPermission\",\"desc\":\"\",\"mappings\":\"*\"}",
+                                "mappings": ""
+                            },
+                            "10777": {
+                                "id": 10777,
+                                "handler_id": 1297,
+                                "parent_id": 10776,
+                                "name": "",
+                                "source_handler_id": 0,
+                                "position": 30,
+                                "enabled": 1,
+                                "type": "INPUT",
+                                "required": 0,
+                                "cache_enabled": 0,
+                                "data": "{\"name\":\"\",\"path\":\"path\",\"desc\":\"\",\"combine_mode\":\"first\",\"mappings\":\"*\"}",
+                                "mappings": ""
+                            },
+                            "10778": {
+                                "id": 10778,
+                                "handler_id": 1297,
+                                "parent_id": 10777,
+                                "name": "",
+                                "source_handler_id": 0,
+                                "position": 40,
+                                "enabled": 1,
+                                "type": "VALUE",
+                                "required": 0,
+                                "cache_enabled": 0,
+                                "data": "{\"name\":\"\",\"type\":\"string\",\"value\":{\"string\":\"{path}\",\"array\":[],\"bool\":false},\"mappings\":\"*\"}",
+                                "mappings": ""
+                            }
+                        },
+                        "ids_by_parent": {
+                            "10775": [
+                                10776
+                            ],
+                            "10776": [
+                                10777
+                            ],
+                            "10777": [
+                                10778
+                            ]
+                        },
+                        "parents_by_id": {
+                            "10776": 10775,
+                            "10777": 10776,
+                            "10778": 10777
+                        },
+                        "ids_by_order": [
+                            10776,
+                            10777,
+                            10778
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
