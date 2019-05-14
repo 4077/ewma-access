@@ -23,7 +23,12 @@ class Permissions extends \Controller
         $v = $this->v();
 
         $v->assign([
-                       'MODULE_SELECT' => $this->moduleSelectView()
+                       'MODULE_SELECT' => $this->moduleSelectView(),
+                       'ADD_BUTTON'    => $this->c('\std\ui button:view', [
+                           'path'    => '>xhr:add',
+                           'class'   => 'add button',
+                           'content' => '<div class="icon"></div>'
+                       ]),
                    ]);
 
         if ($this->module) {
@@ -34,11 +39,6 @@ class Permissions extends \Controller
                                    'module_namespace' => $this->module->namespace
                                ],
                                'class'   => 'delete button',
-                               'content' => '<div class="icon"></div>'
-                           ]),
-                           'ADD_BUTTON'    => $this->c('\std\ui button:view', [
-                               'path'    => '>xhr:add',
-                               'class'   => 'add button',
                                'content' => '<div class="icon"></div>'
                            ]),
                            'TREE'          => $this->treeView()

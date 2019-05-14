@@ -15,13 +15,23 @@ class Xhr extends \Controller
 
     public function add()
     {
+        $modulesTreeController = $this->c('\ewma\dev\ui\modulesTree~|' . $this->_nodeId());
+
+        $modulesTreeController->s('|' . $this->_nodeId(), [
+            'display' => [
+                'local'  => true,
+                'vendor' => true
+            ]
+        ], RA);
+
         $this->c('\std\ui\dialogs~:open:permissionModuleSelector|ewma/access/permissions', [
-            'path' => '\ewma\dev\ui\modulesTree~:view|' . $this->_nodeId(),
-            'data' => [
+            'path'  => '\ewma\dev\ui\modulesTree~:view|' . $this->_nodeId(),
+            'data'  => [
                 'callbacks' => [
                     'select' => $this->_abs('@app:addModule')
                 ]
-            ]
+            ],
+            'class' => ''
         ]);
     }
 
